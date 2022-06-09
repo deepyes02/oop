@@ -7,7 +7,7 @@ class EnqueueCustomCss
 		add_action('wp_enqueue_scripts', [$this, '__wp_enqueue_scripts'], 5);
 	}
 
-	public function __wp_enqueue_scripts()
+	function __wp_enqueue_scripts()
 	{
 		wp_enqueue_style('myobject-style', get_stylesheet_uri(), array(), _S_VERSION);
 		wp_style_add_data('myobject-style', 'rtl', 'replace');
