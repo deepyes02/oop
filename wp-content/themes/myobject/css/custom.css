@@ -1,3 +1,5 @@
-body {
-    line-height: 2;
+.site-title a {
+    color: red;
+    text-transform: uppercase;
+    text-decoration: none;
 }
