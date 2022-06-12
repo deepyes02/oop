@@ -1,9 +1,13 @@
 <?php
-class SetupTheme
+
+namespace MyObjects;
+
+class AfterSetupTheme
 {
 	public function __construct()
 	{
 		add_action('after_setup_theme', [$this, 'myobject_setup']);
+		add_action('after_setup_theme', [$this, 'myobject_content_width'], 0);
 	}
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -87,13 +91,15 @@ class SetupTheme
 		add_theme_support(
 			'custom-logo',
 			array(
-				'height'      => 250,
-				'width'       => 250,
+				'height'      => 100,
+				'width'       => 100,
 				'flex-width'  => true,
 				'flex-height' => true,
 			)
 		);
 	}
+	public function myobject_content_width()
+	{
+		$GLOBALS['content_width'] = apply_filters('myobject_content_width', 640);
+	}
 }
-
-new SetupTheme();

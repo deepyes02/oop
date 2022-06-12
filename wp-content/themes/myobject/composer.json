@@ -1,0 +1,13 @@
+{
+    "name": "deepesh/myobject",
+    "description": "compose library for my theme",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MyObjects\\": "classes/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

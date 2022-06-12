@@ -1,6 +1,8 @@
 <?php
 
-class EnqueueCustomCss
+namespace MyObjects;
+
+class EnqueueScript
 {
 	public function __construct()
 	{
@@ -20,4 +22,3 @@ class EnqueueCustomCss
 		wp_enqueue_style('myobject-custom', get_template_directory_uri() . '/css/custom.css', array(), _S_VERSION);
 	}
 }
-$enqueue_custom_css = new EnqueueCustomCss();
