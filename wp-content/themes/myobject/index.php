@@ -11,7 +11,6 @@
  *
  * @package myobject
  */
-
 get_header();
 ?>
 
